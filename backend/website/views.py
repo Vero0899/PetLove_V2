@@ -31,8 +31,10 @@ def login(request):
     return render(request, "login.html")
 
 
-def cat(request):
-    return render(request, "cats.html")
+def alimentos(request):
+     products = Product.objects.all()
+     context = {"products": products}
+     return render(request, "alimentos.html", context)
 
 
 def dog(request):

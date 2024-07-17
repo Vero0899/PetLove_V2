@@ -1,13 +1,11 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-PetLove - Home
+PetLover - Cats
 {% endblock %}
 
 {% block content %}
-<!-- <img src="\static\images\icons\petloveLogo.jpg" alt="logo" class="logo-image"> -->
-<h1 class="display-1">Bienvenid@s!</h1>
-<h2>Porque Sabemos que Tu Mascota También Es Tu Familia</h2>
+<h2 id="titulos"> Alimenta a tu mascota con Amor, Calidad y Mimitos  </h2>
 <div id="carouselExample" class="carousel slide mb-5">
     <div class="carousel-inner">
 
@@ -31,8 +29,8 @@ PetLove - Home
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-    <!-- Products -->
-    {% if products %}
+
+{% if products %}
     <div class="row gap-4 mb-5">
         <h1 class="display-3">Productos</h1>
         {% for product in products %}
@@ -83,49 +81,10 @@ PetLove - Home
         </div>
         {% endfor %}
     </div>
-    {% endif %}
-<!-- Categories -->
-{% if categories %}
-<div class="row gap-4 mb-5">
-    <h1 class="display-3">Categorias</h1>
-    {% for category in categories %}
-    <div class="card shadow p-3 border-0" style="width: 18rem;">
-        <img src="{{category.image_url}}" class="card-img-top" alt="...">
-        <div class="card-body text-center">
-            <h5 class="card-title">
-                {{category.name}}
-            </h5>
-        </div>
-    </div>
-    {% endfor %}
-</div>
 {% endif %}
 
-<!-- Products -->
-{% if rescueds %}
-<div class="row gap-4 mb-5">
-    <h1 class="display-3">Rescatados</h1>
-    {% for rescued in rescueds %}
-    <div class="card shadow p-3 border-0" style="width: 18rem;">
-        <img src="{{rescued.image_url}}" class="card-img-top" style="height: 180px" alt="...">
-        <div class="card-body">
-            <h5 class="card-title" style="height: 60px">
-                {{rescued.name}}
-            </h5>
-            <div class="d-flex flex-column gap-2">
-                <div class="d-flex gap-2">
-                    <span class="badge text-bg-light" style="width: max-content">{{rescued.type}}</span>
-                    <span class="badge text-bg-light" style="width: max-content">{{rescued.gender}}</span>
-                    <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edad"
-                          class="badge bg-primary text-white" style="width: max-content">{{rescued.age}}</span>
-                </div>
-                <span class="fw-medium fs-6">{{rescued.direction}}</span>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-{% endif %}
+
+
 <!-- Info -->
 <section class="mt-4 bg-body-tertiary">
     <article>
@@ -171,4 +130,13 @@ Te aseguramos que lo que compres en nuestra tienda será lo mejor que encontrar
     </article>
 </section>
 
+
+
+
+<style>
+      #titulos{
+        color: dodgerblue;
+        padding-bottom: 5%;
+    }
+</style>
 {% endblock %}
