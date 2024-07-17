@@ -1,24 +1,23 @@
 // Función para hacer scroll hacia arriba
+window.addEventListener('scroll', function() {
+  var scrollPosition = window.scrollY;
+  var footerPosition = document.querySelector('footer').getBoundingClientRect().top + window.scrollY;
+  var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+  if (scrollPosition > footerPosition - window.innerHeight) {
+      scrollToTopBtn.style.display = 'block';
+  } else {
+      scrollToTopBtn.style.display = 'none';
+  }
+});
+
 function scrollToTop() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
 }
 
-// Función para mostrar u ocultar el botón
-function toggleButtonVisibility() {
-    const button = document.getElementById('volver-arriba');
-    const footer = document.querySelector('footer');
-    const footerRect = footer.getBoundingClientRect();
-    const footerVisible = footerRect.top <= window.innerHeight;
-
-    if (footerVisible) {
-        button.classList.add('visible');
-    } else {
-        button.classList.remove('visible');
-    }
-}
-
-// Añadir el evento scroll para verificar la visibilidad del botón
-window.addEventListener('scroll', toggleButtonVisibility);
 
 /* validaciones*/
 const nombre = document.getElementById("name")

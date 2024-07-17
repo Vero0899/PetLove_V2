@@ -1,5 +1,5 @@
 /* Esta lista podría ser reemplazada por la respuesta de un backend */
-const bicicletas = [
+const productos= [
   {
     id:1,
     nombre: "Lata chicken 150gr",
@@ -22,7 +22,7 @@ const bicicletas = [
   },
   {
     id:5,
-    nombre: "Champio DOG 10kg",
+    nombre: "Champion DOG 10kg",
     precio: 30999,
   },
   {

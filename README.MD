@@ -17,7 +17,7 @@ py -m venv venv
 ## 03 Instalar requerimientos
 
 ```bash
-pip install -r requirements.txt
+---NO USAR ---pip install -r requirements.txt
 
 ---POR SI FALLA EL ANTERIOR ---   .\venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
