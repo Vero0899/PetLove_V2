@@ -40,7 +40,13 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-## 07 Correr servidor
+## 07 Para instalar MYSQL
+
+```bash
+  pip install mysqlclient
+```
+
+## 08 Correr servidor
 
 ```bash
 python manage.py runserver
